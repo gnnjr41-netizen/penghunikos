@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portal Penghuni - Kos Suci</title>
+<!-- WAJIB supaya halaman di dalam iframe ikut mode HP, bukan mode Desktop -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<style>
+  /* html,body WAJIB 100% tinggi & lebar, tanpa margin/padding sedikit pun -
+     inilah penyebab paling umum tampilan "kepotong"/"cuma versi desktop"
+     kalau wrapper GitHub Pages-nya tidak diset begini: iframe jadi punya
+     ukuran default browser (mis. 300x150px lalu di-scale paksa), bukan
+     benar-benar mengisi layar HP. */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden; background: #f1f5f9;
+  }
+  #frame {
+    border: 0; display: block; width: 100vw; height: 100vh;
+  }
+  /* dukungan dynamic viewport height (address bar HP yang muncul/hilang) */
+  @supports (height: 100dvh) {
+    #frame { height: 100dvh; }
+  }
+</style>
+</head>
+<body>
+  <!--
+    GANTI URL DI BAWAH INI dengan URL deploy Web App KOS SUCI Anda,
+    ditambah "?page=portal" di akhirnya. Contoh:
+    https://script.google.com/macros/s/AKfycbxxxxxxxxxxxxxxxxxxxx/exec?page=portal
+
+    Setelah file ini diupload ke repo GitHub Pages Anda (misalnya sebagai
+    "portal.html" atau "portal/index.html"), penyewa cukup dibagikan link
+    pendek ini, contoh:
+      https://njr41-netizen.github.io/portal.html
+    atau kalau diupload sebagai portal/index.html:
+      https://njr41-netizen.github.io/portal/
+    - jauh lebih ringkas daripada link script.google.com yang panjang.
+  -->
+  <iframe id="frame"
+    src="https://script.google.com/macros/s/AKfycbzqdSFyNTw2zpU0JzP6kNrc-hzIMQP8P95ne1FQucjrnVPkdhydbdLTjFX9s1gQDidh_Q/exec?page=portal"
+    title="Portal Penghuni Kos Suci"
+    allow="clipboard-write"
+  ></iframe>
+</body>
+</html>
